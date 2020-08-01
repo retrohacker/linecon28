@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "ibm";
+  src: url("/fonts/Web_IBM_BIOS-2y.woff") format("woff");
+}
+body {
+  background-color: #282828;
+  margin: 0;
+  padding: 26px;
+}
+
+body * {
+  color: #FFB000;
+  font-family: "ibm" !important;
+  font-size: 16px !important;
+  text-shadow: #FFB000 0 0 4px;
+}
+pre {
+  line-height: 5px;
+}
