@@ -80,6 +80,9 @@ function submitPassword(value) {
     type: 'text',
     value: renderPassword(line)
   })
+  linebuffer = []
+  print('LineCon 28')
+  prompt('Login:', submitLogin)
   render()
   submitForm()
 }
@@ -87,7 +90,8 @@ function submitPassword(value) {
 function submitForm() {
   const uhash = CryptoJS.SHA512(user.name).toString()
   const phash = CryptoJS.SHA512(user.password).toString()
-  post("/api/user", {
+  user = {}
+  post("/api/login", {
     uid: CryptoJS.SHA512(uhash + phash).toString()
   })
 }
